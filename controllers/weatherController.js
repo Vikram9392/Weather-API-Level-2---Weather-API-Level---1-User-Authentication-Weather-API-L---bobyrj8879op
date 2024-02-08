@@ -50,7 +50,7 @@ const postWeatherAlert = async (req, res) => {
       cityName, humidity, weatherDescription, temperature, zipCode
     })
     // Example response when alert is posted successfully:
-    res.status(201).json({ message: 'Weather alert posted successfully', alert: newAlert });
+    return res.status(201).json({ message: 'Weather alert posted successfully', alert: newAlert });
   } catch (error) {
     res
       .status(500)
